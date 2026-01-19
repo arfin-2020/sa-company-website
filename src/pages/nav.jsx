@@ -1,6 +1,6 @@
 import {Link } from 'react-router-dom'
 import { useState, useEffect, useRef } from "react"
-import logo from '../assets/logo.jpg'
+import logo from '../assets/logo.png'
 function Nav(){
 
     const [open, setOpen] = useState(false)
@@ -36,6 +36,9 @@ function Nav(){
   ]
     return(
         <>
+          {/* Progress Bar  */}
+    <div id="progress-bar" className="fixed top-0 left-0 h-1 bg-brand-accent z-[100] transition-all duration-150" style={{ width: "0%" }}></div>
+
          <nav className="fixed top-0 w-full z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -45,7 +48,7 @@ function Nav(){
             <img
               src={logo}
               alt="Logo"
-              className="w-12 h-12 object-contain rounded-lg"
+              className="w-40 h-15 object-contain rounded-lg "
             />
             <div className="leading-tight">
                 <h1 className="font-bold text-lg text-white tracking-tight">
