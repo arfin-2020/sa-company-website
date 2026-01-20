@@ -36,7 +36,7 @@ const ResourcesSection = () => {
           {/* Equipment Table */}
           <div>
             <h3 className="text-2xl font-bold text-[#0f172a] mb-8 flex items-center">
-              <span className="w-8 h-1 bg-[#d4af37] mr-3"></span> Plant & Machinery
+              <span className="w-8 h-1 bg-[#ee9f26] mr-3"></span> Plant & Machinery
             </h3>
             <div className="bg-slate-50 border border-slate-100 rounded-lg overflow-hidden">
               <table className="w-full text-left text-sm">
@@ -48,19 +48,19 @@ const ResourcesSection = () => {
                 </thead>
                 <tbody className="divide-y divide-slate-200">
                   <tr>
-                    <td className="px-6 py-4 font-bold text-[#d4af37]">Earthmoving</td>
+                    <td className="px-6 py-4 font-bold text-[#ee9f26]">Earthmoving</td>
                     <td className="px-6 py-4">Dozers, Excavators, Loaders</td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 font-bold text-[#d4af37]">Road Works</td>
+                    <td className="px-6 py-4 font-bold text-[#ee9f26]">Road Works</td>
                     <td className="px-6 py-4">Graders, Rollers, Asphalt Pavers</td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 font-bold text-[#d4af37]">Logistics</td>
+                    <td className="px-6 py-4 font-bold text-[#ee9f26]">Logistics</td>
                     <td className="px-6 py-4">Tippers, Water Tankers, Vehicles</td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 font-bold text-[#d4af37]">Power</td>
+                    <td className="px-6 py-4 font-bold text-[#ee9f26]">Power</td>
                     <td className="px-6 py-4">Heavy Duty Generators</td>
                   </tr>
                 </tbody>
@@ -71,7 +71,7 @@ const ResourcesSection = () => {
           {/* Manpower Stats */}
           <div style={{ transitionDelay: "200ms" }}>
             <h3 className="text-2xl font-bold text-[#0f172a] mb-8 flex items-center">
-              <span className="w-8 h-1 bg-[#d4af37] mr-3"></span> Professional Strength
+              <span className="w-8 h-1 bg-[#ee9f26] mr-3"></span> Professional Strength
             </h3>
             <div className="grid grid-cols-2 gap-6">
               

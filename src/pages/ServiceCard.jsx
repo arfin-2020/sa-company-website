@@ -12,7 +12,7 @@ const ServiceCard = ({ icon: Icon, image, title, description }) => {
           className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
           onError={(e) => {
             e.target.src =
-              "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80";
+              "https://www.climatech-inc.ca/wp-content/uploads/2021/06/3d-render-3-buildings-exterior-view-picture-id1172567061.jpg";
           }}
         />
         {/* Modern Gradient Overlay */}
@@ -65,7 +65,7 @@ export default function ServicesCard() {
       description:
         "Major highways and inner-city infrastructure networks.",
       image:
-        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80",
+        "https://media.istockphoto.com/id/526298880/photo/road-rollers-working-on-the-construction-site.jpg?s=612x612&w=0&k=20&c=C7CM-81xFktkVKcJMmC-CgYuE5D2zomncwTv7kZ5h4o=",
     },
     {
       id: 2,
@@ -74,7 +74,7 @@ export default function ServicesCard() {
       description:
         "Modern apartment complexes with high-end finishing.",
       image:
-        "https://images.unsplash.com/photo-1460472178825-e5240623abe5?auto=format&fit=crop&w=800&q=80",
+        "https://www.climatech-inc.ca/wp-content/uploads/2021/06/3d-render-3-buildings-exterior-view-picture-id1172567061.jpg",
     },
     {
       id: 3,
@@ -83,7 +83,7 @@ export default function ServicesCard() {
       description:
         "Bespoke private luxury villas designed for Omani comfort.",
       image:
-        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80",
+        "https://5.imimg.com/data5/SELLER/Default/2022/11/HI/TQ/HS/7822679/vila-building-construction-service.jpg",
     },
   ];
 

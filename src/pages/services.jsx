@@ -1,6 +1,5 @@
 import { ArrowRight, ShieldCheck, Building2, Layers, Dumbbell, Container, Van, Bolt, GanttChart } from "lucide-react";
-import { Link } from "react-router-dom";
-import ServicesCard from "./ServiceCard";
+
 import ResourcesSection from "./ResourcesSection";
 
 const ServiceCardForServicePage = ({ icon: Icon, image, title, description }) => {
@@ -35,8 +34,6 @@ const ServiceCardForServicePage = ({ icon: Icon, image, title, description }) =>
         <p className="text-slate-500 text-base leading-relaxed mb-8 grow">
           {description}
         </p>
-
-       
       </div>
 
       {/* Subtle Bottom Accent Line */}
@@ -63,7 +60,7 @@ export default function ServicesPage() {
       description:
         "Modern apartment complexes with high-end finishing.",
       image:
-        "https://images.unsplash.com/photo-1460472178825-e5240623abe5?auto=format&fit=crop&w=800&q=80",
+        "https://cgmood.com/storage/previews/09-2020/30011/30011.jpg",
     },
     {
       id: 3,
