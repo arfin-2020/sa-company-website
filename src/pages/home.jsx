@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import image2 from "../assets/construction-building.jpeg";
 import { Link } from "react-router-dom";
+import ServiceCard from "./ServiceCard";
+import ServicesCard from "./ServiceCard";
 
 export default function Home() {
   useEffect(() => {
@@ -149,7 +151,7 @@ export default function Home() {
                 accuracy, quality, and safety along with customer satisfaction.
               </p>
               <Link to="/about" className="bg-[#ee9f26]/10 border-2 border-[#ee9f26] text-[#ee9f26] font-semibold py-2 px-6 rounded-lg backdrop-blur-md hover:bg-[#ee9f26] hover:text-white transition-colors duration-400">
-                See More
+                About us
               </Link>  
             </div>
             <div className="relative reveal transition delay-300">
@@ -170,6 +172,112 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+       {/* <!-- Services Grid --> */}
+
+    <section id="services" className="py-24 bg-brand-light">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-16 reveal">
+          <span
+            className="text-brand-accent font-bold tracking-widest uppercase text-sm"
+            >Capabilities</span
+          >
+          <h2 className="text-4xl font-heading font-bold text-brand-dark mt-2">
+            Comprehensive Solutions
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* <!-- Service Cards --> */}
+          <div className="bg-white p-8 shadow-sm card-hover transition-all reveal">
+            <h4 className="font-bold text-lg mb-3 text-brand-dark">
+              Road Construction
+            </h4>
+            <p className="text-sm text-gray-500">
+              Major highways and inner-city infrastructure networks.
+            </p>
+          </div>
+          <div
+            className="bg-white p-8 shadow-sm card-hover transition-all reveal"
+            style={{transitionDelay: "100ms"}}
+          >
+            <h4 className="font-bold text-lg mb-3 text-brand-dark">
+              Residential Buildings
+            </h4>
+            <p className="text-sm text-gray-500">
+              Modern apartment complexes with high-end finishing.
+            </p>
+          </div>
+          <div
+            className="bg-white p-8 shadow-sm card-hover transition-all reveal"
+            style={{transitionDelay: "200ms"}}
+          >
+            <h4 className="font-bold text-lg mb-3 text-brand-dark">
+              Villa Construction
+            </h4>
+            <p className="text-sm text-gray-500">
+              Bespoke private luxury villas designed for Omani comfort.
+            </p>
+          </div>
+          <div
+            className="bg-white p-8 shadow-sm card-hover transition-all reveal"
+            style={{transitionDelay: "300ms"}}
+          >
+            <h4 className="font-bold text-lg mb-3 text-brand-dark">
+              Asphalt Works
+            </h4>
+            <p className="text-sm text-gray-500">
+              Rigid pavement and professional asphalt laying services.
+            </p>
+          </div>
+          <div
+            className="bg-white p-8 shadow-sm card-hover transition-all reveal"
+            style={{transitionDelay: "400ms"}}
+          >
+            <h4 className="font-bold text-lg mb-3 text-brand-dark">
+              Concrete Supply
+            </h4>
+            <p className="text-sm text-gray-500">
+              High-grade ready-mix concrete supply for massive pours.
+            </p>
+          </div>
+          <div
+            className="bg-white p-8 shadow-sm card-hover transition-all reveal"
+            style={{transitionDelay: "500ms"}}
+          >
+            <h4 className="font-bold text-lg mb-3 text-brand-dark">
+              Crusher Products
+            </h4>
+            <p className="text-sm text-gray-500">
+              Aggregates and raw materials supply chain management.
+            </p>
+          </div>
+          <div
+            className="bg-white p-8 shadow-sm card-hover transition-all reveal"
+            style={{transitionDelay: "600ms"}}
+          >
+            <h4 className="font-bold text-lg mb-3 text-brand-dark">
+              Material Transport
+            </h4>
+            <p className="text-sm text-gray-500">
+              Heavy-duty fleet for logistics and site delivery.
+            </p>
+          </div>
+          <div
+            className="bg-white p-8 shadow-sm card-hover transition-all reveal"
+           style={{transitionDelay: "700ms"}}
+          >
+            <h4 className="font-bold text-lg mb-3 text-brand-dark">
+              Equipment Rental
+            </h4>
+            <p className="text-sm text-gray-500">
+              Graders, Dozers, and Loaders for external contracting.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <ServicesCard/>
     </>
   );
 }

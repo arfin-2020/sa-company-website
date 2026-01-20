@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
 export default function About() {
-  return(
+  return (
     <>
-    <section id="about" className="py-24 bg-white">
+      <section id="about" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="reveal">
@@ -65,34 +65,60 @@ export default function About() {
       </section>
 
       {/* Mission and Vision Section */}
-
-    <section className="py-20 bg-brand-dark text-white">
-        <div className="max-w-7xl mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-white/5 p-10 rounded-lg border border-white/10 reveal transition-all hover:border-brand-accent">
-                    <div className="w-12 h-12 bg-brand-accent rounded-full flex items-center justify-center mb-6">
-                        <svg className="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4 font-heading">Our Mission</h3>
-                    <ul className="space-y-3 text-gray-400">
-                        <li className="flex items-center"><span className="text-brand-accent mr-2">▹</span> High quality standards in all phases</li>
-                        <li className="flex items-center"><span className="text-brand-accent mr-2">▹</span> Optimal cost efficiency for clients</li>
-                        <li className="flex items-center"><span className="text-brand-accent mr-2">▹</span> Implementation of innovative technology</li>
-                        <li className="flex items-center"><span className="text-brand-accent mr-2">▹</span> Strong project management protocols</li>
-                    </ul>
-                </div>
-                <div className="bg-white/5 p-10 rounded-lg border border-white/10 reveal transition-all hover:border-brand-accent" style={{ transitionDelay: "200ms" }}>
-                    <div className="w-12 h-12 bg-brand-accent rounded-full flex items-center justify-center mb-6">
-                        <svg className="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4 font-heading">Our Vision</h3>
-                    <p className="text-gray-400 leading-relaxed">
-                        To be the most professional and reliable construction partner in Oman, recognized for delivering premium quality projects that contribute to the nation's 2040 urban growth strategy.
-                    </p>
-                </div>
+      <section className="py-20 bg-[#0f172a] text-white">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid md:grid-cols-2 gap-8">
+          
+          {/* Mission Card */}
+     
+          <div className="bg-white/5 p-10 rounded-lg border border-white/10 transition-all hover:border-[#d4af37]">
+      
+            <div className="w-12 h-12 bg-[#d4af37] rounded-full flex items-center justify-center mb-6">
+              <svg className="w-6 h-6 text-[#0f172a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
             </div>
+            <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              Our Mission
+            </h3>
+            <ul className="space-y-3 text-gray-400">
+              <li className="flex items-center">
+                <span className="text-[#d4af37] mr-2">▹</span> High quality standards in all phases
+              </li>
+              <li className="flex items-center">
+                <span className="text-[#d4af37] mr-2">▹</span> Optimal cost efficiency for clients
+              </li>
+              <li className="flex items-center">
+                <span className="text-[#d4af37] mr-2">▹</span> Implementation of innovative technology
+              </li>
+              <li className="flex items-center">
+                <span className="text-[#d4af37] mr-2">▹</span> Strong project management protocols
+              </li>
+            </ul>
+          </div>
+
+          {/* Vision Card */}
+          <div 
+            className="bg-white/5 p-10 rounded-lg border border-white/10 transition-all hover:border-[#d4af37]" 
+            style={{ transitionDelay: '200ms' }}
+          >
+            <div className="w-12 h-12 bg-[#d4af37] rounded-full flex items-center justify-center mb-6">
+              <svg className="w-6 h-6 text-[#0f172a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </div>
+            <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              Our Vision
+            </h3>
+            <p className="text-gray-400 leading-relaxed">
+              To be the most professional and reliable construction partner in Oman, recognized for delivering premium quality projects that contribute to the nation's 2040 urban growth strategy.
+            </p>
+          </div>
+
         </div>
+      </div>
     </section>
     </>
-  )
+  );
 }
