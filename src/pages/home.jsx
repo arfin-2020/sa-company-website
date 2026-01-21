@@ -176,7 +176,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <ServicesCard /> */}
+      <ServicesCard />
       <HomeProject />
       <PartnerLogos />
     </>
