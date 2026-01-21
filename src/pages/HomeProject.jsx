@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const HomeProject = () => {
@@ -9,13 +9,12 @@ const HomeProject = () => {
     {
       id: 1,
       category: "road",
-      image:
-        "https://i.ibb.co/ksrFxPsk/Strabag.jpg",
+      image: "https://i.ibb.co/ksrFxPsk/Strabag.jpg",
       tag: "Infrastructure",
-      title: "Design, Build, Repairs of infrastructure at Monsoon affected Areas North Al Sharqiyah Region",
+      title:
+        "Design, Build, Repairs of infrastructure at Monsoon affected Areas North Al Sharqiyah Region",
       client: "STRABAG",
-      description:
-        "Construction of Cut off wall, Subgrade, ABC and Rip Rap",
+      description: "Construction of Cut off wall, Subgrade, ABC and Rip Rap",
     },
     {
       id: 2,
@@ -23,7 +22,8 @@ const HomeProject = () => {
       image:
         "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80",
       tag: "Commercial",
-      title: "Construction of Internal roads at wilayat dima & Al Tayeen North Sharqiyah",
+      title:
+        "Construction of Internal roads at wilayat dima & Al Tayeen North Sharqiyah",
       client: "M/S GULF ISLAND INTERNATIONAL LLC STRABAG",
       description:
         "Hill Cutting, Embankment Filling, Sub Base, ABC, Kerbstone and Interlock",
@@ -34,7 +34,8 @@ const HomeProject = () => {
       image:
         "https://images.unsplash.com/photo-1590487988256-9ed24133863e?auto=format&fit=crop&q=80",
       tag: "Water Infrastructure",
-      title: "Civil Work at Al02 surge feed tank with compound wall for Reinforcement of Al Sharqiyah Water Transmission System.",
+      title:
+        "Civil Work at Al02 surge feed tank with compound wall for Reinforcement of Al Sharqiyah Water Transmission System.",
       client: "CHINA GEO- ENGINEERING CORPORATION INTERNATIONAL LTD.",
       description:
         "Construction of Surge feed Tank, Chlorination Building, Boundary wall, Hill Cutting, Embankment Filling, Sub Base, ABC, Asphalt, Kerbstone, Interlock, Road Signboards and Road Marking.",
@@ -58,7 +59,6 @@ const HomeProject = () => {
               Landmark Projects
             </h2>
           </div>
-          
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -112,7 +112,6 @@ const HomeProject = () => {
               </div>
             </div>
           ))}
-       
         </div>
 
         {filteredProjects.length === 0 && (

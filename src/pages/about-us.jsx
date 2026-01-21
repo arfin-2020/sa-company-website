@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import WhyChooseUs from "./WhyChooseUs";
+import TeamSection from "./Team";
 
 export default function About() {
   return (
@@ -15,11 +15,11 @@ export default function About() {
                 Salman Al Askari SPC
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Salman Al Askari SPC is a civil contracting & Real estate
-                Development Company that offers all services related to civil
-                contracting and trading for all types of civil infrastructure
-                projects. We deliver the projects with the highest levels of
-                accuracy, quality, and safety along with customer satisfaction.
+                Salman Al Askari SPC is a civil contracting and real estate
+                development company delivering reliable construction solutions
+                across Oman. We provide a full range of services related to
+                civil infrastructure, contracting, and trading, serving both
+                government and private sector clients.
               </p>
 
               <p className="text-gray-600 leading-relaxed mb-8">
@@ -66,13 +66,13 @@ export default function About() {
       </section>
 
       {/* Mission and Vision Section */}
-      <section className="py-20 bg-[#f8fafc] text-white">
+      <section className="py-20 bg-[#0f172a]  text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Mission Card */}
 
             <div className="bg-white/5 p-10 rounded-lg border border-white/10 transition-all hover:border-[#d4af37]">
-              <div className="w-12 h-12 bg-[#d4af37] rounded-full flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-[#ee9f26] rounded-full flex items-center justify-center mb-6">
                 <svg
                   className="w-6 h-6 text-[#0f172a]"
                   fill="none"
@@ -88,7 +88,7 @@ export default function About() {
                 </svg>
               </div>
               <h3
-                className="text-2xl font-bold mb-4 text-black"
+                className="text-2xl font-bold mb-4 text-white"
                 style={{ fontFamily: "Poppins, sans-serif" }}
               >
                 Our Mission
@@ -122,7 +122,7 @@ export default function About() {
               className="bg-white/5 p-10 rounded-lg border border-white/10 transition-all hover:border-[#ee9f26]"
               style={{ transitionDelay: "200ms" }}
             >
-              <div className="w-12 h-12 bg-[#d4af37] rounded-full flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-[#ee9f26] rounded-full flex items-center justify-center mb-6">
                 <svg
                   className="w-6 h-6 text-[#0f172a]"
                   fill="none"
@@ -144,7 +144,7 @@ export default function About() {
                 </svg>
               </div>
               <h3
-                className="text-2xl font-bold mb-4 text-black"
+                className="text-2xl font-bold mb-4 text-white"
                 style={{ fontFamily: "Poppins, sans-serif" }}
               >
                 Our Vision
@@ -158,7 +158,8 @@ export default function About() {
           </div>
         </div>
       </section>
-      <WhyChooseUs/>
+      <WhyChooseUs />
+      <TeamSection />
     </>
   );
 }

@@ -151,9 +151,12 @@ export default function Home() {
                 projects. We deliver the projects with the highest levels of
                 accuracy, quality, and safety along with customer satisfaction.
               </p>
-              <Link to="/about" className="bg-[#ee9f26]/10 border-2 border-[#ee9f26] text-[#ee9f26] font-semibold py-2 px-6 rounded-lg backdrop-blur-md hover:bg-[#ee9f26] hover:text-white transition-colors duration-400">
+              <Link
+                to="/about"
+                className="bg-[#ee9f26]/10 border-2 border-[#ee9f26] text-[#ee9f26] font-semibold py-2 px-6 rounded-lg backdrop-blur-md hover:bg-[#ee9f26] hover:text-white transition-colors duration-400"
+              >
                 About us
-              </Link>  
+              </Link>
             </div>
             <div className="relative reveal transition delay-300">
               <img
@@ -173,9 +176,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-    <ServicesCard/>
-    <HomeProject/>
-    <PartnerLogos/>
+      <ServicesCard />
+      <HomeProject />
+      <PartnerLogos />
     </>
   );
 }

@@ -37,12 +37,12 @@ const ServiceCard = ({ icon: Icon, image, title, description }) => {
         {/* Button with Arrow Animation */}
         <div className="mt-auto">
           <Link
-          to ="/services"
+            to="/services"
             onClick={() => (window.location.href = "#")}
             className="group/btn inline-flex items-center gap-2 text-[#ee9f26] font-bold text-sm uppercase tracking-wider hover:text-[#ee9f26] transition-all"
           >
             <span>See More</span>
-            
+
             <div className="p-2 bg-orange-50 rounded-full group-hover/btn:bg-[#ee9f26] group-hover/btn:text-white transition-all duration-300 transform group-hover/btn:translate-x-1">
               <ArrowRight size={18} />
             </div>
@@ -62,8 +62,7 @@ export default function ServicesCard() {
       id: 1,
       icon: Building2,
       title: "Road Construction",
-      description:
-        "Major highways and inner-city infrastructure networks.",
+      description: "Major highways and inner-city infrastructure networks.",
       image:
         "https://media.istockphoto.com/id/526298880/photo/road-rollers-working-on-the-construction-site.jpg?s=612x612&w=0&k=20&c=C7CM-81xFktkVKcJMmC-CgYuE5D2zomncwTv7kZ5h4o=",
     },
@@ -71,8 +70,7 @@ export default function ServicesCard() {
       id: 2,
       icon: Layers,
       title: "Residential Buildings",
-      description:
-        "Modern apartment complexes with high-end finishing.",
+      description: "Modern apartment complexes with high-end finishing.",
       image:
         "https://www.climatech-inc.ca/wp-content/uploads/2021/06/3d-render-3-buildings-exterior-view-picture-id1172567061.jpg",
     },
@@ -80,8 +78,7 @@ export default function ServicesCard() {
       id: 3,
       icon: ShieldCheck,
       title: "Villa Construction",
-      description:
-        "Bespoke private luxury villas designed for Omani comfort.",
+      description: "Bespoke private luxury villas designed for Omani comfort.",
       image:
         "https://5.imimg.com/data5/SELLER/Default/2022/11/HI/TQ/HS/7822679/vila-building-construction-service.jpg",
     },
@@ -106,9 +103,6 @@ export default function ServicesCard() {
           ))}
         </div>
       </div>
-
-
-        
     </div>
   );
 }
