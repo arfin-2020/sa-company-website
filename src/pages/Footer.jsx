@@ -13,7 +13,7 @@ function Footer() {
                           className="w-40 h-15 object-contain rounded-lg "
                         />
             <span className="text-2xl font-heading font-bold block mb-4"
-              >SALMAN AL ASKARI SPC</span
+              >SALMAN AL ASKARI Group</span
             >
             <p className="text-gray-400 max-w-sm mb-6">
               A leading engineering and contracting force in the Sultanate of
@@ -67,7 +67,7 @@ function Footer() {
         <div
           className="border-t border-slate-800 pt-8 flex flex-col md:row justify-between items-center text-xs text-gray-500"
         >
-          <p>&copy; 2026 Salman Al Askari SPC. All Rights Reserved.</p>
+          <p>&copy; 2026 Salman Al Askari Group. All Rights Reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <Link href="#" className="hover:text-brand-accent">Privacy Policy</Link>
             <Link href="#" className="hover:text-brand-accent">Quality Assurance</Link>

@@ -58,7 +58,7 @@ function Nav() {
       <nav className="fixed top-0 w-full z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 shadow-lg">
         {/* Scroll Progress Bar */}
         <div
-          className="absolute top-0 left-0 h-1 bg-amber-500 z-[60] transition-all duration-150"
+          className="absolute top-0 left-0 h-1 bg-amber-500 z-60 transition-all duration-150"
           style={{ width: `${scrollProgress}%` }}
         ></div>
 
@@ -73,10 +73,10 @@ function Nav() {
 
               <div className="leading-tight">
                 <h1 className="font-bold text-lg text-white tracking-tight uppercase">
-                  Salman Al Askari
+                  Salman Al Askari Group
                 </h1>
                 <p className="text-amber-500 text-[10px] uppercase tracking-widest font-bold">
-                  Civil Contracting SPC
+                  Civil Contracting Company
                 </p>
               </div>
             </Link>

@@ -142,10 +142,10 @@ export default function Home() {
                 Who We Are
               </span>
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-dark mt-4 mb-6">
-                Salman Al Askari SPC
+                Salman Al Askari Group
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Salman Al Askari SPC is a civil contracting & Real estate
+                Salman Al Askari Group is a civil contracting & Real estate
                 Development Company that offers all services related to civil
                 contracting and trading for all types of civil infrastructure
                 projects. We deliver the projects with the highest levels of

@@ -18,7 +18,7 @@ export default function ProjectPage() {
       id: 2,
       category: "civil",
       image:
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80",
+        "https://i.ibb.co/nNyYnSFw/Road-Con-Asset-2-4x.png",
       tag: "Commercial",
       title:
         "Construction of Internal roads at wilayat dima & Al Tayeen North Sharqiyah",
@@ -30,7 +30,7 @@ export default function ProjectPage() {
       id: 3,
       category: "govt",
       image:
-        "https://images.unsplash.com/photo-1590487988256-9ed24133863e?auto=format&fit=crop&q=80",
+        "https://i.ibb.co/jk0VwJgG/Road-Con2-Asset-4-4x.png",
       tag: "Water Infrastructure",
       title:
         "Civil Work at Al02 surge feed tank with compound wall for Reinforcement of Al Sharqiyah Water Transmission System.",
@@ -42,7 +42,7 @@ export default function ProjectPage() {
       id: 4,
       category: "road",
       image:
-        "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80",
+        "https://i.ibb.co/hxW5jf96/NGF.png",
       tag: "Infrastructure",
       title:
         "(NJC,NFR,NLR,BR3) For Reinforcement of AL Sharqiyah Water Transmission System",
@@ -53,8 +53,7 @@ export default function ProjectPage() {
       id: 5,
       category: "civil",
       image:
-        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80",
-      tag: "Residential",
+        "https://i.ibb.co/wZQ65CKw/Road-Con2-Asset-3-4x.png",
       title:
         "(DESIGN AND CONSTRUCTION OF LINK ROADS IN WILAYAT SHINAS, NORTH AL BATINAH  GOVERNORATE )",
       client: "ROAD LINE L.L.C",
@@ -64,7 +63,7 @@ export default function ProjectPage() {
       id: 6,
       category: "govt",
       image:
-        "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80",
+        "https://i.ibb.co/rqJB7m2/Road-Con2-Asset-5-4x.png",
       tag: "Public Works",
       title:
         "(REHABILITATION AND TREATMENT OF ROAD DAMAGE IN OQ   COMPANY IN RAYSUT AREA)",
@@ -84,7 +83,7 @@ export default function ProjectPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12">
             <div>
-              <span className="text-orange-500 font-bold tracking-widest uppercase text-sm">
+              <span className="text-amber-500 font-bold tracking-widest uppercase text-sm">
                 Portfolio
               </span>
               <h2 className="text-4xl font-bold text-slate-900 mt-2">
@@ -157,7 +156,7 @@ export default function ProjectPage() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <span className="text-orange-500 text-xs font-bold uppercase">
+                  <span className="text-amber-500 text-xs font-bold uppercase">
                     {project.tag}
                   </span>
                   <h4 className="text-xl font-bold text-slate-900 mt-1">
