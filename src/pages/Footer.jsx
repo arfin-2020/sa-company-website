@@ -13,7 +13,7 @@ function Footer() {
                           className="w-40 h-15 object-contain rounded-lg "
                         />
             <span className="text-2xl font-heading font-bold block mb-4"
-              >SALMAN AL ASKARI Group</span
+              >SALMAN AL ASKARI GROUP</span
             >
             <p className="text-gray-400 max-w-sm mb-6">
               A leading engineering and contracting force in the Sultanate of
