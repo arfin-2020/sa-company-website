@@ -72,7 +72,7 @@ function Nav() {
               <img style={{ width: "100px", height: "50px" }} src={logo} alt="Logo" className="w-40 h-15 object-contain" />
 
               <div className="leading-tight">
-                <h1 className="font-bold text-lg text-white tracking-tight uppercase">
+                <h1 className="font-bold text-m text-white tracking-tight uppercase">
                   Salman Al Askari Group
                 </h1>
                 <p className="text-amber-500 text-[10px] uppercase tracking-widest font-bold">
