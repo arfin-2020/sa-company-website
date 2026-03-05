@@ -12,7 +12,6 @@ function getCookieLang() {
 function setLangCookie(langCode) {
   const hostname = window.location.hostname;
   const expiry   = "expires=Thu, 01 Jan 1970 00:00:00 UTC";
-
   if (langCode === "en") {
     document.cookie = `googtrans=; ${expiry}; path=/;`;
     document.cookie = `googtrans=; ${expiry}; path=/; domain=${hostname};`;
@@ -42,7 +41,6 @@ function Nav() {
   const menuRef   = useRef(null);
   const buttonRef = useRef(null);
 
-  // Restore scroll position after reload
   useEffect(() => {
     const savedScroll = sessionStorage.getItem("scrollAfterReload");
     if (savedScroll !== null) {
@@ -51,7 +49,6 @@ function Nav() {
     }
   }, []);
 
-  // Scroll progress bar
   useEffect(() => {
     const update = () => {
       const h = document.documentElement.scrollHeight - window.innerHeight;
@@ -61,7 +58,6 @@ function Nav() {
     return () => window.removeEventListener("scroll", update);
   }, []);
 
-  // Close hamburger on outside click
   useEffect(() => {
     const handler = (e) => {
       if (
@@ -73,15 +69,12 @@ function Nav() {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
-  // Lock body scroll when mobile menu open
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "unset";
     return () => { document.body.style.overflow = "unset"; };
   }, [open]);
 
-  const handleToggle = () => {
-    switchLanguage(isArabic ? "en" : "ar");
-  };
+  const handleToggle = () => switchLanguage(isArabic ? "en" : "ar");
 
   const navLinks = [
     { to: "/",         label: "Home"     },
@@ -92,38 +85,84 @@ function Nav() {
   ];
 
   // ── Language Toggle Button ─────────────────────────────────────────────
-  // "notranslate" class + translate="no" tells Google Translate to skip this element
-  // So the button text always stays in its original language regardless of page language
-  const LangToggleBtn = ({ className = "" }) => (
-    <button
-      onClick={handleToggle}
-      translate="no"                          // HTML attribute — tells Google Translate to skip
-      className={`notranslate flex items-center gap-1.5 px-3 py-2 rounded-lg border text-sm font-semibold transition-all duration-200
-        ${isArabic
-          ? "bg-amber-500 border-amber-500 text-slate-900 hover:bg-amber-400"
-          : "border-slate-600 text-slate-300 hover:text-white hover:border-amber-500/60 hover:bg-slate-800/50"
-        } ${className}`}
-      aria-label={isArabic ? "Switch to English" : "Switch to Arabic"}
-    >
-      {/* Globe icon */}
-      <svg
-        className={`w-4 h-4 flex-shrink-0 ${isArabic ? "text-slate-900" : "text-amber-400"}`}
-        fill="none" stroke="currentColor" viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
-        <circle cx="12" cy="12" r="10" strokeWidth="1.8" />
-        <path
-          strokeWidth="1.8" strokeLinecap="round"
-          d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-        />
-      </svg>
+  //
+  // Desktop → globe icon + full text label
+  // Mobile  → sliding dual-pill: [ EN | ع ]
+  //           Amber highlight slides to the ACTIVE side.
+  //           Both scripts are always visible → zero confusion.
+  //
+  const LangToggleBtn = ({ isMobile = false }) => {
+    if (isMobile) {
+      return (
+        <button
+          onClick={handleToggle}
+          translate="no"
+          className="notranslate relative flex items-center overflow-hidden rounded-lg border border-slate-600 hover:border-amber-500/70 transition-colors duration-200"
+          style={{ height: "36px" }}
+          aria-label={isArabic ? "Switch to English" : "Switch to Arabic"}
+        >
+          {/* Sliding amber background pill */}
+          <span
+            className="absolute inset-y-0 w-1/2 bg-amber-500 transition-transform duration-300 ease-in-out"
+            style={{ transform: isArabic ? "translateX(100%)" : "translateX(0%)" }}
+          />
 
-      {/* This span is also marked notranslate so text is never touched by Google */}
-      <span className="notranslate" translate="no">
-        {isArabic ? "🇬🇧 English" : "🇸🇦 Arabic"}
-      </span>
-    </button>
-  );
+          {/* EN label */}
+          <span
+            className="notranslate relative z-10 w-10 text-center text-[11px] font-bold tracking-widest transition-colors duration-300"
+            style={{ color: isArabic ? "#64748b" : "#0f172a" }}
+            translate="no"
+          >
+            EN
+          </span>
+
+          {/* Divider */}
+          <span className="relative z-10 text-slate-600 select-none text-xs">|</span>
+
+          {/* ع label */}
+          <span
+            className="notranslate relative z-10 w-10 text-center text-[15px] font-bold transition-colors duration-300"
+            style={{
+              color: isArabic ? "#0f172a" : "#64748b",
+              fontFamily: "Georgia, serif",
+            }}
+            translate="no"
+          >
+            ع
+          </span>
+        </button>
+      );
+    }
+
+    // ── Desktop: unchanged original style ──
+    return (
+      <button
+        onClick={handleToggle}
+        translate="no"
+        className={`notranslate flex items-center gap-1.5 px-3 py-2 rounded-lg border text-sm font-semibold transition-all duration-200
+          ${isArabic
+            ? "bg-amber-500 border-amber-500 text-slate-900 hover:bg-amber-400"
+            : "border-slate-600 text-slate-300 hover:text-white hover:border-amber-500/60 hover:bg-slate-800/50"
+          }`}
+        aria-label={isArabic ? "Switch to English" : "Switch to Arabic"}
+      >
+        <svg
+          className={`w-4 h-4 flex-shrink-0 ${isArabic ? "text-slate-900" : "text-amber-400"}`}
+          fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="10" strokeWidth="1.8" />
+          <path
+            strokeWidth="1.8" strokeLinecap="round"
+            d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+          />
+        </svg>
+        <span className="notranslate" translate="no">
+          {isArabic ? "English" : "عربي"}
+        </span>
+      </button>
+    );
+  };
 
   return (
     <>
@@ -146,7 +185,7 @@ function Nav() {
                 className="object-contain"
               />
               <div className="leading-tight">
-                <h1 className="font-bold text-m text-white tracking-tight uppercase">
+                <h1 className="font-bold text-lg text-white tracking-tight uppercase">
                   Salman Al Askari Group
                 </h1>
                 <p className="text-amber-500 text-[10px] uppercase tracking-widest font-bold">
@@ -165,13 +204,13 @@ function Nav() {
                 </Link>
               ))}
               <div className="ml-3">
-                <LangToggleBtn />
+                <LangToggleBtn isMobile={false} />
               </div>
             </div>
 
-            {/* ── Mobile: Lang button + Hamburger ──────────────────── */}
+            {/* ── Mobile: dual-pill + Hamburger ────────────────────── */}
             <div className="md:hidden flex items-center gap-2">
-              <LangToggleBtn />
+              <LangToggleBtn isMobile={true} />
               <button
                 ref={buttonRef}
                 className="text-white p-2 hover:bg-slate-800/50 rounded-lg transition-colors focus:outline-none"
