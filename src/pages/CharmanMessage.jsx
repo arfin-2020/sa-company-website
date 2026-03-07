@@ -1,13 +1,7 @@
 function CharmanMessage() {
   return (
-    <div className="grid md:grid-cols-2 gap-16 items-center mt-15">
-      <div className="relative reveal transition delay-300">
-        <img
-          src="https://img.freepik.com/premium-photo/corporate-portrait-proud-with-business-man-office-start-professional-career-as-intern-company-confident-suit-with-smile-formal-employee-workplace-administration_590464-381909.jpg?semt=ais_rp_progressive&w=740&q=80"
-          alt="Construction Site"
-          className="rounded-lg shadow-2xl"
-        />
-      </div>
+    <div className="grid md:grid-cols-1 gap-16 items-center mt-15">
+      
       <div className="reveal">
         <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-dark mt-4 mb-6">
           CHAIRMAN MESSAGE

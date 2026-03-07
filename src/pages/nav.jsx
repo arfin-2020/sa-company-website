@@ -1,20 +1,3 @@
-// ─────────────────────────────────────────────────────────────────────────────
-// FILE STRUCTURE (all in one file for review — split into separate files below)
-//
-//  src/
-//    components/
-//      Nav.jsx          ← updated nav with Projects dropdown
-//    pages/
-//      Gallery.jsx      ← empty placeholder page
-//      ProjectList.jsx  ← empty placeholder page
-//
-// ─────────────────────────────────────────────────────────────────────────────
-
-
-// ═══════════════════════════════════════════════════════════════════════════════
-// src/components/Nav.jsx
-// ═══════════════════════════════════════════════════════════════════════════════
-
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
@@ -49,19 +32,19 @@ function switchLanguage(langCode) {
 // ─── Nav Component ────────────────────────────────────────────────────────────
 
 function Nav() {
-  const [open, setOpen]                     = useState(false);
+  const [open, setOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [projectsOpen, setProjectsOpen]     = useState(false); // desktop dropdown
+  const [projectsOpen, setProjectsOpen] = useState(false); // desktop dropdown
   const [mobileProjectsOpen, setMobileProjectsOpen] = useState(false); // mobile accordion
 
   const currentLang = getCookieLang();
-  const isArabic    = currentLang === "ar";
-  const location    = useLocation();
+  const isArabic = currentLang === "ar";
+  const location = useLocation();
 
-  const menuRef        = useRef(null);
-  const buttonRef      = useRef(null);
-  const dropdownRef    = useRef(null);
-  const dropdownTimer  = useRef(null);
+  const menuRef = useRef(null);
+  const buttonRef = useRef(null);
+  const dropdownRef = useRef(null);
+  const dropdownTimer = useRef(null);
 
   // Restore scroll after language reload
   useEffect(() => {
@@ -86,9 +69,12 @@ function Nav() {
   useEffect(() => {
     const handler = (e) => {
       if (
-        menuRef.current   && !menuRef.current.contains(e.target) &&
-        buttonRef.current && !buttonRef.current.contains(e.target)
-      ) setOpen(false);
+        menuRef.current &&
+        !menuRef.current.contains(e.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(e.target)
+      )
+        setOpen(false);
     };
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
@@ -97,7 +83,9 @@ function Nav() {
   // Lock body scroll when mobile menu open
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "unset";
-    return () => { document.body.style.overflow = "unset"; };
+    return () => {
+      document.body.style.overflow = "unset";
+    };
   }, [open]);
 
   // Close dropdown on route change
@@ -121,18 +109,19 @@ function Nav() {
   // ── Nav links config ──────────────────────────────────────────────────────
   // "projects" is special — has children rendered as dropdown
   const navLinks = [
-    { to: "/",         label: "Home"     },
-    { to: "/about",    label: "About"    },
+    { to: "/", label: "Home" },
+    { to: "/about", label: "About" },
     { to: "/services", label: "Services" },
     {
       label: "Projects",
       isDropdown: true,
       children: [
-        { to: "/projects/gallery",      label: "Gallery"       },
-        { to: "/projects/project-list", label: "Project List"  },
+        { to: "/projects/gallery", label: "Gallery" },
+        { to: "/projects/project-list", label: "Project List" },
       ],
     },
-    { to: "/contact",  label: "Contact"  },
+    
+    { to: "/contact", label: "Contact" },
   ];
 
   const isProjectsActive = location.pathname.startsWith("/projects");
@@ -150,7 +139,9 @@ function Nav() {
         >
           <span
             className="absolute inset-y-0 w-1/2 bg-amber-500 transition-transform duration-300 ease-in-out"
-            style={{ transform: isArabic ? "translateX(100%)" : "translateX(0%)" }}
+            style={{
+              transform: isArabic ? "translateX(100%)" : "translateX(0%)",
+            }}
           />
           <span
             className="notranslate relative z-10 w-10 text-center text-[11px] font-bold tracking-widest transition-colors duration-300"
@@ -159,10 +150,15 @@ function Nav() {
           >
             EN
           </span>
-          <span className="relative z-10 text-slate-600 select-none text-xs">|</span>
+          <span className="relative z-10 text-slate-600 select-none text-xs">
+            |
+          </span>
           <span
             className="notranslate relative z-10 w-10 text-center text-[15px] font-bold transition-colors duration-300"
-            style={{ color: isArabic ? "#0f172a" : "#64748b", fontFamily: "Georgia, serif" }}
+            style={{
+              color: isArabic ? "#0f172a" : "#64748b",
+              fontFamily: "Georgia, serif",
+            }}
             translate="no"
           >
             ع
@@ -176,20 +172,24 @@ function Nav() {
         onClick={handleLangToggle}
         translate="no"
         className={`notranslate flex items-center gap-1.5 px-3 py-2 rounded-lg border text-sm font-semibold transition-all duration-200
-          ${isArabic
-            ? "bg-amber-500 border-amber-500 text-slate-900 hover:bg-amber-400"
-            : "border-slate-600 text-slate-300 hover:text-white hover:border-amber-500/60 hover:bg-slate-800/50"
+          ${
+            isArabic
+              ? "bg-amber-500 border-amber-500 text-slate-900 hover:bg-amber-400"
+              : "border-slate-600 text-slate-300 hover:text-white hover:border-amber-500/60 hover:bg-slate-800/50"
           }`}
         aria-label={isArabic ? "Switch to English" : "Switch to Arabic"}
       >
         <svg
           className={`w-4 h-4 flex-shrink-0 ${isArabic ? "text-slate-900" : "text-amber-400"}`}
-          fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
           aria-hidden="true"
         >
           <circle cx="12" cy="12" r="10" strokeWidth="1.8" />
           <path
-            strokeWidth="1.8" strokeLinecap="round"
+            strokeWidth="1.8"
+            strokeLinecap="round"
             d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
           />
         </svg>
@@ -203,7 +203,6 @@ function Nav() {
   return (
     <>
       <nav className="fixed top-0 w-full z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 shadow-lg">
-
         {/* Scroll Progress Bar */}
         <div
           className="absolute top-0 left-0 h-1 bg-amber-500 transition-all duration-150"
@@ -212,11 +211,14 @@ function Nav() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
+            <Link
+              to="/"
+              className="flex items-center gap-3 hover:opacity-90 transition-opacity"
+            >
               <img
-                src={logo} alt="Logo"
+                src={logo}
+                alt="Logo"
                 style={{ width: "100px", height: "50px" }}
                 className="object-contain"
               />
@@ -245,9 +247,10 @@ function Nav() {
                       {/* Projects trigger button */}
                       <button
                         className={`flex items-center gap-1 px-4 py-2 rounded-lg transition-all duration-200 font-medium
-                          ${isProjectsActive
-                            ? "text-amber-400 bg-slate-800/50"
-                            : "text-slate-300 hover:text-white hover:bg-slate-800/50"
+                          ${
+                            isProjectsActive
+                              ? "text-amber-400 bg-slate-800/50"
+                              : "text-slate-300 hover:text-white hover:bg-slate-800/50"
                           }`}
                         aria-haspopup="true"
                         aria-expanded={projectsOpen}
@@ -256,18 +259,26 @@ function Nav() {
                         {/* Chevron icon — rotates when open */}
                         <svg
                           className={`w-3.5 h-3.5 transition-transform duration-200 ${projectsOpen ? "rotate-180" : ""}`}
-                          fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
                         >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2.5}
+                            d="M19 9l-7 7-7-7"
+                          />
                         </svg>
                       </button>
 
                       {/* Dropdown panel */}
                       <div
                         className={`absolute top-full left-0 mt-1.5 w-44 bg-slate-900 border border-slate-700/60 rounded-xl shadow-2xl overflow-hidden transition-all duration-200 origin-top
-                          ${projectsOpen
-                            ? "opacity-100 scale-y-100 translate-y-0 pointer-events-auto"
-                            : "opacity-0 scale-y-95 -translate-y-1 pointer-events-none"
+                          ${
+                            projectsOpen
+                              ? "opacity-100 scale-y-100 translate-y-0 pointer-events-auto"
+                              : "opacity-0 scale-y-95 -translate-y-1 pointer-events-none"
                           }`}
                       >
                         {/* Amber top accent line */}
@@ -295,9 +306,10 @@ function Nav() {
                     key={link.to}
                     to={link.to}
                     className={`px-4 py-2 rounded-lg transition-all duration-200 font-medium
-                      ${location.pathname === link.to
-                        ? "text-amber-400 bg-slate-800/50"
-                        : "text-slate-300 hover:text-white hover:bg-slate-800/50"
+                      ${
+                        location.pathname === link.to
+                          ? "text-amber-400 bg-slate-800/50"
+                          : "text-slate-300 hover:text-white hover:bg-slate-800/50"
                       }`}
                   >
                     {link.label}
@@ -320,16 +332,30 @@ function Nav() {
                 aria-label="Toggle menu"
                 aria-expanded={open}
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   {open ? (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
                   ) : (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
                   )}
                 </svg>
               </button>
             </div>
-
           </div>
         </div>
 
@@ -349,24 +375,34 @@ function Nav() {
                     <button
                       onClick={() => setMobileProjectsOpen(!mobileProjectsOpen)}
                       className={`w-full flex items-center justify-between px-4 py-3 rounded-lg transition-all duration-200 font-medium
-                        ${isProjectsActive
-                          ? "text-amber-400 bg-slate-800/50"
-                          : "text-slate-300 hover:text-white hover:bg-slate-800/50"
+                        ${
+                          isProjectsActive
+                            ? "text-amber-400 bg-slate-800/50"
+                            : "text-slate-300 hover:text-white hover:bg-slate-800/50"
                         }`}
                     >
                       <span>{link.label}</span>
                       <svg
                         className={`w-4 h-4 transition-transform duration-200 ${mobileProjectsOpen ? "rotate-180" : ""}`}
-                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2.5}
+                          d="M19 9l-7 7-7-7"
+                        />
                       </svg>
                     </button>
 
                     {/* Accordion children */}
                     <div
                       className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                        mobileProjectsOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+                        mobileProjectsOpen
+                          ? "max-h-40 opacity-100"
+                          : "max-h-0 opacity-0"
                       }`}
                     >
                       <div className="ml-4 mt-1 space-y-0.5 border-l-2 border-amber-500/40 pl-3">
@@ -393,9 +429,10 @@ function Nav() {
                   to={link.to}
                   onClick={() => setOpen(false)}
                   className={`block px-4 py-3 rounded-lg transition-all duration-200 font-medium
-                    ${location.pathname === link.to
-                      ? "text-amber-400 bg-slate-800/50"
-                      : "text-slate-300 hover:text-white hover:bg-slate-800/50"
+                    ${
+                      location.pathname === link.to
+                        ? "text-amber-400 bg-slate-800/50"
+                        : "text-slate-300 hover:text-white hover:bg-slate-800/50"
                     }`}
                 >
                   {link.label}
@@ -412,53 +449,3 @@ function Nav() {
 }
 
 export default Nav;
-
-
-// ═══════════════════════════════════════════════════════════════════════════════
-// src/pages/Gallery.jsx
-// ═══════════════════════════════════════════════════════════════════════════════
-
-/*
-export default function Gallery() {
-  return (
-    <main className="min-h-screen bg-slate-950 text-white flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-3">Gallery</h1>
-        <p className="text-slate-400">Coming soon — build your gallery here.</p>
-      </div>
-    </main>
-  );
-}
-*/
-
-
-// ═══════════════════════════════════════════════════════════════════════════════
-// src/pages/ProjectList.jsx
-// ═══════════════════════════════════════════════════════════════════════════════
-
-/*
-export default function ProjectList() {
-  return (
-    <main className="min-h-screen bg-slate-950 text-white flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-3">Project List</h1>
-        <p className="text-slate-400">Coming soon — build your project list here.</p>
-      </div>
-    </main>
-  );
-}
-*/
-
-
-// ═══════════════════════════════════════════════════════════════════════════════
-// src/App.jsx  — add these routes inside your <Routes>
-// ═══════════════════════════════════════════════════════════════════════════════
-
-/*
-import Gallery     from "./pages/Gallery";
-import ProjectList from "./pages/ProjectList";
-
-// Inside <Routes>:
-<Route path="/projects/gallery"      element={<Gallery />}     />
-<Route path="/projects/project-list" element={<ProjectList />} />
-*/

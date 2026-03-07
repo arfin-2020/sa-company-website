@@ -37,7 +37,7 @@ export default function About() {
                 site teams ensure every project meets international standards of
                 durability and aesthetics.
               </p>
-              <div className="grid grid-cols-2 gap-4">
+              {/* <div className="grid grid-cols-2 gap-4">
                 <div className="p-4 bg-slate-50 border-l-4 border-brand-accent">
                   <h4 className="font-bold text-brand-dark">
                     Unmatched Quality
@@ -52,7 +52,7 @@ export default function About() {
                     Focus on absolute satisfaction.
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="relative reveal transition delay-300">
               <img
@@ -201,7 +201,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
       <TeamSection />
     </>
   );
