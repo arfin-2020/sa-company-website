@@ -202,7 +202,7 @@ export default function About() {
         </div>
       </section>
       {/* <WhyChooseUs /> */}
-      <TeamSection />
+      {/* <TeamSection /> */}
     </>
   );
 }

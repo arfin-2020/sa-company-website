@@ -32,7 +32,7 @@ const HomeProject = () => {
       id: 3,
       category: "govt",
       image:
-        "https://images.unsplash.com/photo-1590487988256-9ed24133863e?auto=format&fit=crop&q=80",
+        "https://i.ibb.co/pBfr41dH/Civil-Asset-5-4x.png",
       tag: "Water Infrastructure",
       title:
         "Civil Work at Al02 surge feed tank with compound wall for Reinforcement of Al Sharqiyah Water Transmission System.",

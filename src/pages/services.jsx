@@ -63,7 +63,7 @@ export default function ServicesPage() {
       icon: Building2,
       title: "Road Construction",
       description: "Major highways and inner-city infrastructure networks.",
-      image: "https://i.ibb.co/NgTXPq91/Road-Construction.jpg",
+      image: "https://i.ibb.co/KpWNMYR4/Road-Asset-4-4x.png",
     },
     {
       id: 2,

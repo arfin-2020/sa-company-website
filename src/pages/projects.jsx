@@ -7,7 +7,7 @@ export default function ProjectPage() {
     {
       id: 1,
       category: "road",
-      image: "https://i.ibb.co/ksrFxPsk/Strabag.jpg",
+      image: "https://www.leavitt.com/dA/b23b96683d/featuredImage/blog-construction.jpg/1200w/webp/50q",
       tag: "Infrastructure",
       title:
         "Design, Build, Repairs of infrastructure at Monsoon affected Areas North Al Sharqiyah Region",

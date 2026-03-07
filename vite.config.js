@@ -9,6 +9,6 @@ export default defineConfig({
     tailwindcss(),
     
   ],
-  base: process.env.VITE_BASE_PATH || '/sa-company-website',
+  base: process.env.VITE_BASE_PATH || '/',
 })
 
