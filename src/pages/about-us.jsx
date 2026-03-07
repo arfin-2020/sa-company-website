@@ -1,5 +1,6 @@
 import WhyChooseUs from "./WhyChooseUs";
 import TeamSection from "./Team";
+import CharmanMessage from "./CharmanMessage";
 
 export default function About() {
   return (
@@ -14,15 +15,22 @@ export default function About() {
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-dark mt-4 mb-6">
                 SALMAN AL ASKARI GROUP
               </h2>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                SALMAN AL ASKARI GROUP is a civil contracting and real estate
-                development company delivering reliable construction solutions
-                across Oman. We provide a full range of services related to
-                civil infrastructure, contracting, and trading, serving both
-                government and private sector clients.
+              <p className="text-gray-600 leading-relaxed mb-6 text-justify">
+                Salman Al Askari Group is one of the leading Excellent Grade
+                registered company in Sultanate of Oman since 2017. It has come
+                a long way to symbolize commitment, distinction and professional
+                Excellence by meeting the stringent, demanding and extra
+                ordinary work requirements of high engineering, Building works,
+                Industrial projects, Project Management Services, Earthworks,
+                Survey works, Building design services & Waterproofing works
+                etc. Salman Al Askari Group maintains excellent construction
+                standard, dedicated team of Executives, Coordinators, Site
+                Engineers and Supervisors with full safety norms. This firm has
+                enough infrastructural facilities to mobilize skilled,
+                semiskilled work force with qualified supervisors.
               </p>
 
-              <p className="text-gray-600 leading-relaxed mb-8">
+              <p className="text-gray-600 leading-relaxed mb-8 text-justify">
                 Our reputation is built on the pillars of{" "}
                 <strong>Quality, Accuracy, and Safety</strong>. Whether it's
                 government infrastructure or private residential complexes, our
@@ -62,6 +70,7 @@ export default function About() {
               </div>
             </div>
           </div>
+          <CharmanMessage />
         </div>
       </section>
 
@@ -93,26 +102,36 @@ export default function About() {
               >
                 Our Mission
               </h3>
+              <p className="mb-2 text-justify">
+                The mission of Salman Al Askari Group is to build on our
+                reputation for integrity, excellence, experience,
+                professionalism and leadership as the nation’s finest
+                construction organization by strict adherence to our core values
+                and by:
+              </p>
               <ul className="space-y-3 text-gray-400">
                 <li className="flex items-center">
-                  <span className="text-[#d4af37] mr-2">▹</span> Highest quality
-                  standards alongside cost efficiency
+                  <span className="text-[#d4af37] mr-2">▹</span> Continuously
+                  improving the quality of our work and services.
                 </li>
                 <li className="flex items-center">
-                  <span className="text-[#d4af37] mr-2">▹</span> High quality
-                  standards in all phases
+                  <span className="text-[#d4af37] mr-2">▹</span> Constantly
+                  striving to exceed each client's expectations.
                 </li>
                 <li className="flex items-center">
-                  <span className="text-[#d4af37] mr-2">▹</span> Optimal cost
-                  efficiency for clients
+                  <span className="text-[#d4af37] mr-2">▹</span> Maintaining our
+                  dedication to the highest moral principles.
                 </li>
                 <li className="flex items-center">
-                  <span className="text-[#d4af37] mr-2">▹</span> Implementation
-                  of innovative technology
+                  <span className="text-[#d4af37] mr-2">▹</span> Providing our
+                  people with a challenging, secure and safe environment in
+                  which to achieve personal career goals.
                 </li>
                 <li className="flex items-center">
-                  <span className="text-[#d4af37] mr-2">▹</span> Strong project
-                  management protocols
+                  <span className="text-[#d4af37] mr-2">▹</span> Contributing to
+                  the community by researching and developing new and more
+                  efficient and eco-friendly methods and solutions for our work
+                  and services.
                 </li>
               </ul>
             </div>
@@ -149,11 +168,35 @@ export default function About() {
               >
                 Our Vision
               </h3>
-              <p className="text-gray-400 leading-relaxed">
-                Our vision is to reach a level of excellence that ensures us an
-                excellent grade contracting company in the Oman through
-                professionalism and executing the best quality in our projects.
+              <p className="mb-2 text-justify">
+                The SLI vision enhances the internal culture, and maintains
+                Salman Al Askari Group reputation as a construction leader, an
+                employer of choice, a trustworthy and respected contractor and
+                an active community member. Salman Al Askari Group aspires to be
+                the most respected builder, renowned for:
               </p>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex items-center">
+                  <span className="text-[#d4af37] mr-2">▹</span> Excellence
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#d4af37] mr-2">▹</span> Leadership
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#d4af37] mr-2">▹</span> Unsurpassed
+                  value
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#d4af37] mr-2">▹</span> Quality
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#d4af37] mr-2">▹</span> Professionalism
+                </li>
+                <li className="flex items-center">
+                  <span className="text-[#d4af37] mr-2">▹</span> Corporate
+                  Social Responsibility
+                </li>
+              </ul>
             </div>
           </div>
         </div>
