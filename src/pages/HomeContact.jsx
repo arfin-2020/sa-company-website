@@ -88,10 +88,10 @@ export default function HomeContact() {
                   </div>
                   <div>
                     <h5 className="font-bold text-brand-dark">
-                      Our Headquarters
+                      Our Office
                     </h5>
                     <p className="text-gray-500 text-sm">
-                      Muscat, Sultanate of Oman
+                      C.R.No: 1374481, P.O.Box: 123, Postal Code: 101, Misfah, Bousher, Muscat Sultanate of Oman
                     </p>
                   </div>
                 </div>
@@ -114,7 +114,8 @@ export default function HomeContact() {
                   <div>
                     <h5 className="font-bold text-brand-dark">Email Us</h5>
                     <p className="text-gray-500 text-sm">
-                      info@salmanalaskari.com
+                      info@salmanalaskarigroup.com <br/>
+sa97144448@gmail.com
                     </p>
                   </div>
                 </div>
@@ -136,7 +137,7 @@ export default function HomeContact() {
                   </div>
                   <div>
                     <h5 className="font-bold text-black">Call Support</h5>
-                    <p className="text-gray-500 text-sm">+968 7138 9570</p>
+                    <p className="text-gray-500 text-sm">+968 971 44448</p>
                   </div>
                 </div>
               </div>
