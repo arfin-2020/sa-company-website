@@ -227,7 +227,7 @@ function Nav() {
                   Salman Al Askari Group
                 </h1>
                 <p className="text-amber-500 text-[10px] uppercase tracking-widest font-bold">
-                  Civil Contracting Company
+                  Road & civil construction company
                 </p>
               </div>
             </Link>

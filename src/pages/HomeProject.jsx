@@ -96,7 +96,7 @@ const HomeProject = () => {
                 {/* Button with Arrow Animation */}
                 <div className="mt-5">
                   <Link
-                    to="/projects"
+                    to="/projects/project-list"
                     onClick={() => (window.location.href = "#")}
                     className="group/btn inline-flex items-center gap-2 text-[#ee9f26] font-bold text-sm uppercase tracking-wider hover:text-[#ee9f26] transition-all"
                   >

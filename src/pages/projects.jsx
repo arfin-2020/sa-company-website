@@ -109,7 +109,7 @@ export default function ProjectPage() {
                 }`}
                 onClick={() => setActiveFilter("road")}
               >
-                Roads
+                Roads Division
               </button>
               <button
                 className={`px-4 py-2 text-sm font-bold border border-slate-300 transition-all duration-300 rounded whitespace-nowrap ${
@@ -119,7 +119,7 @@ export default function ProjectPage() {
                 }`}
                 onClick={() => setActiveFilter("civil")}
               >
-                Civil
+                Civil Division
               </button>
               <button
                 className={`px-4 py-2 text-sm font-bold border border-slate-300 transition-all duration-300 rounded whitespace-nowrap ${
@@ -129,7 +129,7 @@ export default function ProjectPage() {
                 }`}
                 onClick={() => setActiveFilter("govt")}
               >
-                Govt
+                Govt Division
               </button>
             </div>
           </div>
